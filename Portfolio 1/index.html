@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #6b46c1 0%, #4299e1 100%);
+        }
+
+        /* Animation for the marquee effect */
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Apply animation to the marquee text */
+        .marquee-text {
+            display: inline-block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: orange; /* Set text color to orange */
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        /* Animated gradient border effect */
+        @keyframes gradientBorder {
+            0% {
+                border-image-source: linear-gradient(45deg, #ff7f00, #ffbf00);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #ff4500, #ff6347);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #ff7f00, #ffbf00);
+            }
+        }
+
+        /* Style the image with animated gradient border */
+        .animated-border {
+            position: relative;
+            display: inline-block;
+            padding: 5px;
+            border: 8px solid transparent;
+            border-radius: 12px;
+            background-clip: content-box;
+            animation: gradientBorder 3s linear infinite;
+        }
+
+        .animated-border img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .animated-border img:hover {
+            box-shadow: 0 0 25px rgba(255, 165, 0, 1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">MyPortfolio</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuButton" class="outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-semibold">Home</a>
+                    <a href="childhood.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Childhood</a>
+                    <a href="education.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Education</a>
+                    <a href="skills.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Skills</a>
+                    <a href="aspirations.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Aspirations</a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Marquee Text -->
+            <h1 class="marquee-text">Welcome to My Journey</h1>
+            <p class="text-xl mb-8 animate-fade-in delay-100">Discover my story from childhood to aspirations</p>
+            <a href="#about" class="bg-white text-purple-800 font-bold rounded-full py-3 px-8 shadow-lg uppercase tracking-wider hover:bg-gray-100 transition duration-300 animate-bounce">Explore More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- Image with Animated Gradient Border -->
+                    <div class="animated-border">
+                        <img src="images/IMG-20230531-WA0005.jpg" alt="Profile">
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <p class="text-gray-600 mb-4">Hello! I'm Jackson Kyule a passionate university student with diverse interests and a drive to make an impact in my field.</p>
+                    <p class="text-gray-600 mb-4">This website describes my personal and professional growth, from my early childhood experiences to my current academic pursuits and future aspirations.</p>
+                    <p class="text-gray-600">Explore more about my journey, skills, and goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 My Personal Journey. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

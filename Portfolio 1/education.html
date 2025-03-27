@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education | My Personal Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6b46c1, #4299e1);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Myportfolio</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Home</a>
+                    <a href="childhood.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Childhood</a>
+                    <a href="education.html" class="py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-semibold">Education</a>
+                    <a href="skills.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Skills</a>
+                    <a href="aspirations.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Aspirations</a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">My Educational Journey</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Primary School Card -->
+            <div class="education-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-pencil-alt text-purple-600 text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Primary School</h2>
+                </div>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">School:</span> Kyaviti primary</p>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">Years:</span> 2008-2016</p>
+                <p class="text-gray-600 mb-6">Developed foundational skills and discovered my love for learning and creativity. I sat for KCPE and attained a mark 0f 301/500</p>
+                <div class="mb-4">
+                    <h3 class="font-semibold mb-2">Key Achievements:</h3>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Class representative (2013-2015)</li>
+                        <li>Young soloist in regional music competition</li>
+                    </ul>
+                </div>
+                <img src="images/kyaviti.jpg" alt="Primary School" class="rounded-lg shadow">
+            </div>
+
+            <!-- High School Card -->
+            <div class="education-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">High School </h2>
+                </div>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">School:</span> Kyandili secondary</p>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">Years:</span> 2017-2020</p>
+                <p class="text-gray-600 mb-6">Graduated with a c+, focusing on key subjects while maintaining active participation in debate club and student government.</p>
+                <div class="mb-4">
+                    <h3 class="font-semibold mb-2">Key Achievements:</h3>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Valedictorian (Top 1% of class)</li>
+                        <li>Science congress winner regional competition (2019)</li>
+                    </ul>
+                </div>
+                <img src="images/kyadili.jpeg" alt="High School" class="rounded-lg shadow">
+            </div>
+
+            <!-- University Card -->
+            <div class="education-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-university text-purple-600 text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Bachelor's Degree</h2>
+                </div>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">University:</span> Zetech University</p>
+                <p class="text-gray-600 mb-4"><span class="font-semibold">Years:</span> 2024-Present</p>
+                <p class="text-gray-600 mb-6">Pursuing barchelor of science information technology.</p>
+                <div class="mb-4">
+                    <h3 class="font-semibold mb-2">Current Progress:</h3>
+                    <div class="mb-2">
+                        <p class="text-sm font-medium text-gray-700">Degree Completion</p>
+                        <div class="progress-bar mt-1">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <p class="text-right text-sm text-gray-500">50% complete</p>
+                    </div>
+                    <div class="mb-2">
+                        <p class="text-sm font-medium text-gray-700">GPA</p>
+                        <div class="progress-bar mt-1">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <p class="text-right text-sm text-gray-500">2.2/4.2</p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="font-semibold mb-2">Notable Courses:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Blockchain</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Artificial Intelligence</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Database Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extracurricular Section -->
+        <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">Extracurricular Activities</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-laptop-code text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Coding Club</h3>
+                    <p class="text-gray-600">Active Member of ITECH club.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-robot text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Robotics Team</h3>
+                    <p class="text-gray-600">Zetech huawei ict academy.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-hands-helping text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">CCNA</h3>
+                    <p class="text-gray-600">Student at cisco networking under the lead of mr. samuel.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 My Personal Journey. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

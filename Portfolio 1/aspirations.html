@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Aspirations | My Personal Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .goal-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .goal-card:hover {
+            transform: translateX(5px);
+            border-left-color: #6b46c1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #6b46c1;
+            border: 4px solid #e9d5ff;
+        }
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #6b46c1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Myportfolio</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuButton" class="outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Home</a>
+                    <a href="childhood.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Childhood</a>
+                    <a href="education.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Education</a>
+                    <a href="skills.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Skills</a>
+                    <a href="aspirations.html" class="py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-semibold">Aspirations</a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Aspirations Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">My Future Aspirations</h1>
+        
+        <!-- Career Vision -->
+        <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-bullseye text-purple-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Career Vision</h2>
+            </div>
+            <p class="text-gray-600 mb-6">I aspire to become a leading software engineer specializing in artificial intelligence solutions, with a focus on developing ethical and impactful technologies that solve real-world problems.</p>
+            <img src="images/future 1.jpg" alt="Future Vision" class="rounded-lg shadow w-full mb-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="goal-card bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i class="fas fa-rocket text-purple-600 mr-2"></i>
+                        Short-term Goals (1-3 years)
+                    </h3>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                        <li>Complete my Computer Science degree with honors</li>
+                        <li>Secure an internship at a leading tech company</li>
+                        <li>Develop and publish two open-source projects</li>
+                        <li>Obtain AWS Certified Developer certification</li>
+                    </ul>
+                </div>
+                <div class="goal-card bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i class="fas fa-star text-purple-600 mr-2"></i>
+                        Long-term Goals (5-10 years)
+                    </h3>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                        <li>Lead a team developing AI-powered applications</li>
+                        <li>Found a tech startup focused on education technology</li>
+                        <li>Speak at international tech conferences</li>
+                        <li>Mentor aspiring software engineers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Roadmap -->
+        <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marked-alt text-purple-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Career Roadmap</h2>
+            </div>
+            <div class="relative roadmap pl-10">
+                <!-- Roadmap Item 1 -->
+                <div class="relative roadmap-item pb-10">
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-full">2024-2026</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">University Graduation</h3>
+                        <p class="text-gray-600">Complete Bachelor's degree in information technology with specialization in Artificial Intelligence.</p>
+                    </div>
+                </div>
+
+                <!-- Roadmap Item 2 -->
+                <div class="relative roadmap-item pb-10">
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-full">2026-2028</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Software Engineer</h3>
+                        <p class="text-gray-600">Join a tech company to gain professional experience in software development and AI applications.</p>
+                    </div>
+                </div>
+
+                <!-- Roadmap Item 3 -->
+                <div class="relative roadmap-item pb-10">
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-full">2028-20230</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Senior Developer</h3>
+                        <p class="text-gray-600">Take on leadership roles in projects and mentor junior developers while specializing in AI solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Roadmap Item 4 -->
+                <div class="relative roadmap-item">
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-full">2030+</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Tech Entrepreneur</h3>
+                        <p class="text-gray-600">Found my own startup focused on developing innovative educational technologies powered by AI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-heart text-purple-600 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Core Values</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-6 border border-purple-100 rounded-lg hover:bg-purple-50 transition duration-300">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Innovation</h3>
+                    <p class="text-gray-600">Continuously pushing boundaries to create novel solutions to complex problems.</p>
+                </div>
+                <div class="text-center p-6 border border-purple-100 rounded-lg hover:bg-purple-50 transition duration-300">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-hand-holding-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Ethics</h3>
+                    <p class="text-gray-600">Developing technology responsibly with consideration for societal impact.</p>
+                </div>
+                <div class="text-center p-6 border border-purple-100 rounded-lg hover:bg-purple-50 transition duration-300">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-book-open text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Lifelong Learning</h3>
+                    <p class="text-gray-600">Constantly expanding my knowledge and skills to stay at the forefront of technology.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 My Personal Journey. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
